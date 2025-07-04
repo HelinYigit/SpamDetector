@@ -1,0 +1,44 @@
+{
+  "_comment": "Thunderbird Spam Detector eklentisinin manifest dosyasıdır.",
+
+  "manifest_version": 2,
+  "name": "Spam Detector",
+  "version": "1.0",
+  "description": "Analyze emails using selected ML models.",
+    "icons": {
+    "48": "mag.png",
+    "96": "mag.png"
+  },
+  "applications": {
+    "gecko": {
+      "id": "spam-detector@example.com",
+      "strict_min_version": "91.0"
+    }
+  },
+  "_comment_applications": "Thunderbird (Gecko) uyumluluğu için ayarlar. ID benzersiz olmalı.",
+
+  "permissions": [
+    "accountsRead",
+    "messagesRead",
+    "messages"
+  ],
+  "_comment_permissions": "Thunderbird'deki e-posta hesaplarına ve mesajlara erişim için gerekli izinler",
+
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "_comment_background": "Eklenti yüklendiğinde çalışacak arka plan betiğini tanımlar",
+
+
+  "browser_action": {
+    "default_popup": "popup.html",
+      "default_icon": {
+    "48": "mag.png",
+    "96": "mag.png"
+  }
+  
+},
+  "_comment_browser_action": "Kullanıcı uzantı ikonuna tıkladığında açılacak popup arayüzü ve simgesi"
+
+}

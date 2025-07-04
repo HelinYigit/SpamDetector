@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Spam Detection</title>
+
+  <!-- Stil ayarları -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 10px;
+      width: 320px;
+      background-color: #f8f8f8;
+    }
+
+    h3 {
+      margin-top: 0;
+      margin-bottom: 8px;
+      text-align: center;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin-top: 12px;
+      font-weight: bold;
+      color: #444;
+    }
+
+    select {
+      width: 100%;
+      padding: 6px;
+      margin-bottom: 10px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    /* Sonuç kutuları */
+    #result, #details {
+      margin-top: 12px;
+      padding: 10px;
+      border-radius: 6px;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    #result strong,
+    #result span,
+    #details span {
+      font-weight: bold;
+    }
+
+    /* Skor barı */
+    .score-bar {
+      height: 12px;
+      border-radius: 4px;
+      margin-top: 5px;
+      background-color: #ddd;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .score-bar-fill {
+      height: 100%;
+      border-radius: 4px;
+      transition: width 0.3s ease;
+    }
+
+    .score-label {
+      font-weight: bold;
+      margin-top: 5px;
+    }
+
+    /* Tooltip kutusu */
+    .tooltip {
+      position: relative;
+      display: inline-block;
+      cursor: help;
+    }
+
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 220px;
+      background-color: #333;
+      color: #fff;
+      text-align: left;
+      border-radius: 6px;
+      padding: 8px;
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+      left: 115%;
+      transform: translateY(-50%);
+      opacity: 0;
+      transition: opacity 0.3s;
+      white-space: normal;
+    }
+
+    /* Tooltip yönlendirmesi */
+    .tooltip-left .tooltiptext {
+      right: 105%;
+      left: auto;
+    }
+
+  .tooltip-right .tooltiptext {
+    left: 105%;
+    right: auto;
+  }
+
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: max-content;
+    max-width: 240px;
+    background-color: #333;
+    color: #fff;
+    text-align: left;
+    border-radius: 6px;
+    padding: 8px;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    white-space: normal;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  </style>
+</head>
+
+<body>
+  <h3>Spam Detector</h3>
+
+  <!-- Text tabanlı model seçimi -->
+  <label for="modelSelect">Choose Text Model:</label>
+  <select id="modelSelect">
+    <option value="naive_bayes">Naive Bayes</option>
+    <option value="logistic_regression">Logistic Regression</option>
+    <option value="random_forest">Random Forest</option>
+    <option value="svm">SVM</option>
+    <option value="xgboost">XGBoost</option>
+  </select>
+
+  <!-- Text modeli spam sonucu buraya gelir -->
+  <div id="result">Waiting for input...</div>
+
+  <!-- URL tabanlı model seçimi -->
+  <label for="urlModelSelect">Choose URL Model:</label>
+  <select id="urlModelSelect">
+    <option value="naive_bayes">Naive Bayes</option>
+    <option value="svm">SVM</option>
+    <option value="decision_tree">Decision Tree</option>
+  </select>
+
+  <!-- URL modeli spam sonucu buraya gelir -->
+  <div id="details"></div>
+
+  <!-- Ana JavaScript dosyası -->
+  <script src="popup.js"></script>
+</body>
+</html>

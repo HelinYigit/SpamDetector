@@ -40,3 +40,8 @@ Models:
 - Text: `Naive Bayes`, `SVM`, `Logistic Regression`, `Random Forest`, `XGBoost`
 - URL: `Naive Bayes`, `Decision Tree`, `SVM`
 
+# Setup & Run
+
+Prepare the Python environment to run the application. Then start the Flask API (app.py). Add the folder as an add-on from the Add-ons tab of Thunderbird and run it.
+
+

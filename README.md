@@ -1,5 +1,5 @@
 # AI-POWERED SPAM DETECTION FOR THUNDERBIRD
-# "This project was developed as part of the Graduation Project course."
+# "This project was developed with the team as part of the Graduation Project course."
 
 This project is a Thunderbird extension powered by machine learning models to detect and classify spam and phishing emails in real time. It analyzes both the email content and embedded URLs, offering enhanced email security and clean inbox management.
 
@@ -42,6 +42,8 @@ Models:
 
 # Setup & Run
 
-Prepare the Python environment to run the application. Then start the Flask API (app.py). Add the folder as an add-on from the Add-ons tab of Thunderbird and run it.
+- Prepare the Python environment to run the application. 
+- Then start the Flask API (app.py). 
+- Add the folder as an add-on from the Add-ons tab of Thunderbird and run it.
 
 

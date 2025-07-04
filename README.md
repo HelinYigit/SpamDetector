@@ -26,8 +26,8 @@ This project is a Thunderbird extension powered by machine learning models to de
 1. The user opens an email in Thunderbird.
 2. The extension sends email text and any embedded URLs to a Flask API.
 3.  The API uses ML models to analyze content and returns:
-   - A spam score (0–100)
-   - A prediction label: `safe`, `suspicious`, or `spam`.
+      A spam score (0–100)
+      A prediction label: `safe`, `suspicious`, or `spam`.
 4. Scores are shown instantly within the Thunderbird interface.
 5. The user can switch models from dropdowns to compare results.
 
